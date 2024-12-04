@@ -8,7 +8,7 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
   },
-  env: {
+  /*env: {
     laptop: {
       viewportWidth: 1000,
       viewportHeight: 660,
@@ -17,7 +17,7 @@ module.exports = defineConfig({
       viewportWidth: 1080,
       viewportHeight: 1920,
     },
-  }
+  }*/
 
   
 });
