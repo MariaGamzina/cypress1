@@ -1,6 +1,6 @@
 before(() => {
   //Cypress.env('laptop');
-  //Cypress.env('phone');
+  Cypress.env('phone');
 });
 
 describe('first', () => {
@@ -52,7 +52,12 @@ describe('second', () => {
     cy.contains('Сказки').should('be.visible');
   });
 
-  it('Add book to favorites', () => {    
+  it('Add book to favorites', () => {
+    cy.contains('Add new').click();
+    cy.get('#title').type('Мастер и Маргарита');
+    cy.get('#description').type('Роман');
+    cy.get('#authors').type('М. Булгаков');
+    cy.contains('Submit').click();    
     cy.get('a.mt-3 .card-title').contains('Мастер и Маргарита').parent().parent().contains('Add to favorite').click();
     cy.get('h4').click();
     cy.get('a.mt-3 .card-title').contains('Мастер и Маргарита').parent().parent().contains('Delete from favorite').should('be.visible');

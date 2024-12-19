@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "phone": "cypress open --config-file cypress-phone.config.js",
+    "laptop": "cypress open --config-file cypress.config.js",
+    "edge-headded-laptop": "cypress run --config-file cypress.config.js --browser edge --headed",
+    "edge-headless-phone": "cypress run --config-file cypress-phone.config.js --browser edge --headless",
+    "chrome-headless-laptop": "cypress run --config-file cypress.config.js --browser chrome --headless",
+    "electron-headded-phone": "cypress run --config-file cypress-phone.config.js --browser electron --headed"
   },
   "author": "",
   "license": "ISC",
